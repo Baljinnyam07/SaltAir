@@ -14,6 +14,10 @@ export const Header = () => {
     router.push("/facilities");
   };
 
+  const pushNews = () => {
+    router.push("/news");
+  };
+
   const pushContact = () => {
     router.push("/contact-us");
   };
@@ -60,6 +64,20 @@ export const Header = () => {
               ""
             )}
             Салбар
+          </div>
+          <div
+            onClick={pushNews}
+            className="cursor-pointer relative"
+            style={{
+              fontWeight: path === "news" ? 700 : 400,
+            }}
+          >
+            {path === "news" ? (
+              <div className="absolute h-1 w-full bg-[#fff] bottom-[-26px]"></div>
+            ) : (
+              ""
+            )}
+            Мэдээ
           </div>
           <div
             onClick={pushContact}
